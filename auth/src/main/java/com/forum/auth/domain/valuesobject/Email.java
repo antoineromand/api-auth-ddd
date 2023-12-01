@@ -3,14 +3,16 @@ package com.forum.auth.domain.valuesobject;
 import jakarta.persistence.Column;
 
 public class Email {
-    @Column()
-    private String email;
 
-    public Email(String email) {
-        this.email = email;
+    @Column(name = "email")
+    private String value;
+
+    public Email(String value) {
+        this.value = value;
     }
 
-    public String getEmail() {
-        return email;
+    public String getValue() {
+        return value;
     }
+
 }

@@ -5,11 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698fad1e-5863-4e93-aafc-7d35da25887a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/Email.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/Password.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/ResetPasswordToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/dto/UserCredentialsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/errors/BlankException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/errors/EmailInvalidException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/errors/EmptyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/errors/ExceptionApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/errors/PasswordExceptions/PasswordFormInvalidException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/errors/PasswordExceptions/PasswordLengthException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/mapper/UserCredentialsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/service/RegisterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/validators/EmailValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/validators/PasswordValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/ports/PasswordEncryptionPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/ports/UserRepositoryPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/adapters/BCryptPasswordEncryptionAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/adapters/UserRepositoryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/errors/EmailAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/errors/ExceptionInfrastructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/presentation/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/test/java/com/forum/auth/application/dto/UserCredentialsDTOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/test/java/com/forum/auth/application/service/RegisterServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/test/java/com/forum/auth/domain/user/UserCredentialsEntityTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/test/java/com/forum/auth/infrastructure/BCryptPasswordEncryptionAdapterIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/src/test/java/com/forum/auth/infrastructure/UserRepositoryAdapterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4953475-9558-4e2e-8725-deb7d770f9f6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4953475-9558-4e2e-8725-deb7d770f9f6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4953475-9558-4e2e-8725-deb7d770f9f6/storage_v2/_src_/database/java_auth.pfG1zQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4953475-9558-4e2e-8725-deb7d770f9f6/storage_v2/_src_/database/java_auth.pfG1zQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/auth/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/user/UserCredentialsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/Email.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/Password.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +52,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/auth">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -36,6 +67,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -64,6 +96,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "android.gradle.sync.needed": "true",
     "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "/Users/antoineromand/Desktop/java",
     "node.js.detected.package.eslint": "true",
@@ -71,7 +104,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -89,7 +122,127 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthApplication">
+  <component name="RunManager" selected="Gradle.UserRepositoryAdapterTest.shouldFindUserByEmail">
+    <configuration name="BCryptPasswordEncryptionAdapterIntegrationTest.shouldEncryptString" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/auth" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.forum.auth.infrastructure.BCryptPasswordEncryptionAdapterIntegrationTest.shouldEncryptString&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="BCryptPasswordEncryptionAdapterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/auth" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.forum.auth.infrastructure.BCryptPasswordEncryptionAdapterTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="BCryptPasswordEncryptionAdapterTest.shouldEncryptString" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/auth" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.forum.auth.infrastructure.BCryptPasswordEncryptionAdapterTest.shouldEncryptString&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserRepositoryAdapterTest.shouldFindUserByEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/auth" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.forum.auth.infrastructure.UserRepositoryAdapterTest.shouldFindUserByEmail&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserRepositoryAdapterTest.shouldRegisterUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/auth" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.forum.auth.infrastructure.UserRepositoryAdapterTest.shouldRegisterUser&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -107,8 +260,22 @@
     </configuration>
     <list>
       <item itemvalue="Docker.docker-compose" />
+      <item itemvalue="Gradle.BCryptPasswordEncryptionAdapterIntegrationTest.shouldEncryptString" />
+      <item itemvalue="Gradle.BCryptPasswordEncryptionAdapterTest" />
+      <item itemvalue="Gradle.BCryptPasswordEncryptionAdapterTest.shouldEncryptString" />
+      <item itemvalue="Gradle.UserRepositoryAdapterTest.shouldFindUserByEmail" />
+      <item itemvalue="Gradle.UserRepositoryAdapterTest.shouldRegisterUser" />
       <item itemvalue="Spring Boot.AuthApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.UserRepositoryAdapterTest.shouldFindUserByEmail" />
+        <item itemvalue="Gradle.UserRepositoryAdapterTest.shouldRegisterUser" />
+        <item itemvalue="Gradle.BCryptPasswordEncryptionAdapterIntegrationTest.shouldEncryptString" />
+        <item itemvalue="Gradle.BCryptPasswordEncryptionAdapterTest.shouldEncryptString" />
+        <item itemvalue="Gradle.BCryptPasswordEncryptionAdapterTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -122,11 +289,26 @@
       <workItem from="1699993784883" duration="1403000" />
       <workItem from="1699995218091" duration="1415000" />
       <workItem from="1700051233283" duration="789000" />
-      <workItem from="1700213266049" duration="9744000" />
+      <workItem from="1700213266049" duration="64171000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/auth/src/test/java/com/forum/auth/application/service/RegisterServiceTest.java</url>
+          <line>30</line>
+          <properties class="com.forum.auth.application.service.RegisterServiceTest" method="shouldRegisterUser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
