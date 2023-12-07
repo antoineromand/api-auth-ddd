@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 
 public class ResetPasswordToken {
     @Column()
-    private String resetPasswordToken;
+    private final String resetPasswordToken;
 
     public ResetPasswordToken(String resetPasswordToken) {
         this.resetPasswordToken = resetPasswordToken;

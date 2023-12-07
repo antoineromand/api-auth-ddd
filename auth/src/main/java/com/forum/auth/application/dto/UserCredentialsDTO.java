@@ -4,7 +4,7 @@ import com.forum.auth.application.validators.EmailValidator;
 import com.forum.auth.application.validators.PasswordValidator;
 
 public class UserCredentialsDTO {
-    private String email;
+    private final String email;
 
     private String password;
 

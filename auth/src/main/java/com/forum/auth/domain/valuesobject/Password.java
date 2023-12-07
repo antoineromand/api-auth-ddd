@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 
 public class Password {
     @Column()
-    private String value;
+    private final String value;
 
     public Password(String password) {
         this.value = password;

@@ -2,7 +2,6 @@ package com.forum.auth.application.mapper;
 
 import com.forum.auth.application.dto.UserCredentialsDTO;
 import com.forum.auth.domain.user.UserCredentialsEntity;
-import com.forum.auth.domain.valuesobject.Email;
 import com.forum.auth.domain.valuesobject.Password;
 import org.springframework.stereotype.Component;
 

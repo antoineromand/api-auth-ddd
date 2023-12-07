@@ -20,17 +20,13 @@ public class UserCredentialsDTOTest {
     @Test
     void shouldThrowExceptionWhenEmailInvalid() {
         String invalidEmail = "invalid_email.com";
-        assertThrows(EmailInvalidException.class, () -> {
-            new UserCredentialsDTO(invalidEmail, "123456A+y4");
-        });
+        assertThrows(EmailInvalidException.class, () -> new UserCredentialsDTO(invalidEmail, "123456A+y4"));
     }
 
     @Test
     void shouldThrowExceptionWhenEmailNull() {
         String invalidEmail = null;
-        assertThrows(NullPointerException.class, () -> {
-            new UserCredentialsDTO(invalidEmail, "123456A+y4");
-        });
+        assertThrows(NullPointerException.class, () -> new UserCredentialsDTO(invalidEmail, "123456A+y4"));
     }
 
 
@@ -44,54 +40,42 @@ public class UserCredentialsDTOTest {
     @Test
     public void shouldThrowExceptionWhenPasswordIsTooShort() {
         String emailStr = "test@example.com";
-        assertThrows(PasswordLengthException.class, () -> {
-            new UserCredentialsDTO(emailStr,"1AB4a+6");
-        }, "Password must be at least 8 characters long");
+        assertThrows(PasswordLengthException.class, () -> new UserCredentialsDTO(emailStr,"1AB4a+6"), "Password must be at least 8 characters long");
     }
 
     @Test
     public void shouldThrowExceptionWhenPasswordIsNull() {
         String emailStr = "test@example.com";
 
-        assertThrows(NullPointerException.class, () -> {
-            new UserCredentialsDTO(emailStr,null);
-        }, "Password must not be null");
+        assertThrows(NullPointerException.class, () -> new UserCredentialsDTO(emailStr,null), "Password must not be null");
     }
 
     @Test
     public void shouldThrowExceptionWhenPasswordIsEmpty() {
         String emailStr = "test@example.com";
 
-        assertThrows(EmptyException.class, () -> {
-            new UserCredentialsDTO(emailStr,"");
-        }, "Password must not be empty");
+        assertThrows(EmptyException.class, () -> new UserCredentialsDTO(emailStr,""), "Password must not be empty");
     }
 
     @Test
     public void shouldThrowExceptionWhenPasswordIsBlank() {
         String emailStr = "test@example.com";
 
-        assertThrows(BlankException.class, () -> {
-            new UserCredentialsDTO(emailStr,"    ");
-        }, "Password must not be blank");
+        assertThrows(BlankException.class, () -> new UserCredentialsDTO(emailStr,"    "), "Password must not be blank");
     }
 
     @Test
     public void shouldThrowExceptionWhenPasswordDoesNotContainAtLeastOneDigit() {
         String emailStr = "test@example.com";
 
-        assertThrows(PasswordFormInvalidException.class, () -> {
-            new UserCredentialsDTO(emailStr,"Abcdefgh+");
-        }, "Password must contain at least one digit");
+        assertThrows(PasswordFormInvalidException.class, () -> new UserCredentialsDTO(emailStr,"Abcdefgh+"), "Password must contain at least one digit");
     }
 
     @Test
     public void shouldThrowExceptionWhenPasswordDoesNotContainAtLeastOneUpperCaseLetter() {
         String emailStr = "test@example.com";
 
-        assertThrows(PasswordFormInvalidException.class, () -> {
-            new UserCredentialsDTO(emailStr, "abcdefgh4+");
-        }, "Password must contain at least one upper case letter");
+        assertThrows(PasswordFormInvalidException.class, () -> new UserCredentialsDTO(emailStr, "abcdefgh4+"), "Password must contain at least one upper case letter");
     }
 
 
