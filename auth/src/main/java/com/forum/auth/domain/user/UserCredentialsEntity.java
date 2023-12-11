@@ -33,10 +33,10 @@ public class UserCredentialsEntity {
 
     @Column(columnDefinition = "varchar(60) default 'USER'")
     @Enumerated(EnumType.STRING)
-    private Role role;
+    private Role role = Role.USER;
     @Column(columnDefinition = "varchar(60) default 'INACTIVE'")
     @Enumerated(EnumType.STRING)
-    private AccountStatus accountStatus;
+    private AccountStatus accountStatus = AccountStatus.INACTIVE;
 
     @Column(name = "is_verified", columnDefinition = "boolean default false")
     private boolean isVerified;

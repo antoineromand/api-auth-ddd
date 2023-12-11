@@ -1,9 +1,9 @@
 package com.forum.auth.application.usecase;
 
-import com.forum.auth.application.dto.UserCredentialsDTO;
+import com.forum.auth.web.dto.UserCredentialsDTO;
 import com.forum.auth.application.mapper.UserCredentialsMapper;
-import com.forum.auth.domain.ports.IPasswordEncryption;
-import com.forum.auth.domain.ports.IUserRepository;
+import com.forum.auth.domain.service.IPasswordEncryption;
+import com.forum.auth.domain.repository.IUserRepository;
 import com.forum.auth.domain.usecase.RegisterUseCase;
 import com.forum.auth.domain.user.UserCredentialsEntity;
 import com.forum.auth.domain.valuesobject.Email;

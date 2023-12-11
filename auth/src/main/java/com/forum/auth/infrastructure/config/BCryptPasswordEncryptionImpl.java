@@ -1,6 +1,6 @@
 package com.forum.auth.infrastructure.config;
 
-import com.forum.auth.domain.ports.IPasswordEncryption;
+import com.forum.auth.domain.service.IPasswordEncryption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.forum.auth.infrastructure;
 
-import com.forum.auth.domain.ports.IUserRepository;
+import com.forum.auth.domain.repository.IUserRepository;
 import com.forum.auth.domain.user.UserCredentialsEntity;
 import com.forum.auth.domain.valuesobject.Email;
 import com.forum.auth.domain.valuesobject.Password;

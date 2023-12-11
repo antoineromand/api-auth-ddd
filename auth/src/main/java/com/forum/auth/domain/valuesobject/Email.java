@@ -5,7 +5,9 @@ import jakarta.persistence.Column;
 public class Email {
 
     @Column(name = "email")
-    private final String value;
+    private String value;
+
+    public Email() {}
 
     public Email(String value) {
         this.value = value;
