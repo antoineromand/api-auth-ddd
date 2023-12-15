@@ -7,7 +7,8 @@ import com.forum.auth.domain.repository.IUserRepository;
 import com.forum.auth.domain.usecase.RegisterUseCase;
 import com.forum.auth.domain.user.UserCredentialsEntity;
 import com.forum.auth.domain.valuesobject.Email;
-import com.forum.auth.infrastructure.errors.EmailAlreadyExistsException;
+import com.forum.auth.application.errors.EmailAlreadyExistsException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -16,7 +17,7 @@ public class RegisterUseCaseImpl implements RegisterUseCase {
     private final IPasswordEncryption passwordEncryption;
     private final UserCredentialsMapper userCredentialsMapper;
 
-
+    @Autowired
     public RegisterUseCaseImpl(IUserRepository userRepository, IPasswordEncryption passwordEncryption, UserCredentialsMapper userCredentialsMapper) {
         this.userRepository = userRepository;
         this.passwordEncryption = passwordEncryption;
@@ -24,7 +25,7 @@ public class RegisterUseCaseImpl implements RegisterUseCase {
     }
 
     @Override
-    public void register(String email, String password) {
+    public void register(String email, String password) throws EmailAlreadyExistsException {
         UserCredentialsDTO userDto = new UserCredentialsDTO(email, password);
         String encryptedPassword = passwordEncryption.encryptPassword(userDto.getPassword());
         UserCredentialsEntity userCredentialsEntity = userRepository.findByEmail(new Email(userDto.getEmail()));

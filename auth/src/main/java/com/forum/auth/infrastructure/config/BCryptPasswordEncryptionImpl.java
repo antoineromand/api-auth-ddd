@@ -19,4 +19,9 @@ public class BCryptPasswordEncryptionImpl implements IPasswordEncryption {
     public String encryptPassword(String rawPassword) {
         return passwordEncoder.encode(rawPassword);
     }
+
+    @Override
+    public Boolean matches(String rawPassword, String encryptedPassword) {
+        return this.passwordEncoder.matches(rawPassword, encryptedPassword);
+    }
 }
