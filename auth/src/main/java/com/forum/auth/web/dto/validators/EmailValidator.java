@@ -1,6 +1,6 @@
 package com.forum.auth.web.dto.validators;
 
-import com.forum.auth.web.dto.errors.EmailInvalidException;
+import com.forum.auth.web.dto.exception.EmailInvalidException;
 
 public class EmailValidator {
     public static void validate(String email) {

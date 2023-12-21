@@ -6,7 +6,7 @@ public class Password {
     @Column(name = "password")
     private String value;
 
-    public Password() {}
+    public Password() { }
 
     public Password(String password) {
         this.value = password;

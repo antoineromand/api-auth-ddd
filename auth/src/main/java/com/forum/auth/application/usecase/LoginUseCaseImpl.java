@@ -1,7 +1,8 @@
 package com.forum.auth.application.usecase;
 
-import com.forum.auth.application.errors.IncorrectPasswordException;
-import com.forum.auth.application.errors.UserNotFoundException;
+import com.forum.auth.application.exception.InactiveUserException;
+import com.forum.auth.application.exception.IncorrectPasswordException;
+import com.forum.auth.application.exception.UserNotFoundException;
 import com.forum.auth.domain.repository.IUserRepository;
 import com.forum.auth.domain.service.IPasswordEncryption;
 import com.forum.auth.domain.usecase.LoginUseCase;
@@ -30,6 +31,9 @@ public class LoginUseCaseImpl implements LoginUseCase {
         Boolean isPasswordCorrect = passwordEncryption.matches(password, user.getPassword().getValue());
         if (!isPasswordCorrect) {
             throw new IncorrectPasswordException("Incorrect password");
+        }
+        if(!user.getAccountStatus().equals(UserCredentialsEntity.AccountStatus.ACTIVE)) {
+            throw new InactiveUserException("User must activate account first");
         }
         return user;
     }

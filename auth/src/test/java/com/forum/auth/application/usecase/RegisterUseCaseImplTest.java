@@ -6,7 +6,7 @@ import com.forum.auth.domain.service.IPasswordEncryption;
 import com.forum.auth.domain.repository.IUserRepository;
 import com.forum.auth.domain.user.UserCredentialsEntity;
 import com.forum.auth.domain.valuesobject.Email;
-import com.forum.auth.application.errors.EmailAlreadyExistsException;
+import com.forum.auth.application.exception.EmailAlreadyExistsException;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

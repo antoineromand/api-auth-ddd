@@ -1,10 +1,10 @@
 package com.forum.auth.web.dto;
 
-import com.forum.auth.web.dto.errors.BlankException;
-import com.forum.auth.web.dto.errors.EmailInvalidException;
-import com.forum.auth.web.dto.errors.EmptyException;
-import com.forum.auth.web.dto.errors.PasswordExceptions.PasswordFormInvalidException;
-import com.forum.auth.web.dto.errors.PasswordExceptions.PasswordLengthException;
+import com.forum.auth.web.dto.exception.BlankException;
+import com.forum.auth.web.dto.exception.EmailInvalidException;
+import com.forum.auth.web.dto.exception.EmptyException;
+import com.forum.auth.web.dto.exception.PasswordExceptions.PasswordFormInvalidException;
+import com.forum.auth.web.dto.exception.PasswordExceptions.PasswordLengthException;
 import com.forum.auth.web.dto.validators.EmailValidator;
 import com.forum.auth.web.dto.validators.PasswordValidator;
 import org.junit.jupiter.api.Test;

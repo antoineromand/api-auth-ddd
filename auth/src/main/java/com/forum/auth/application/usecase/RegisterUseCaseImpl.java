@@ -7,7 +7,7 @@ import com.forum.auth.domain.repository.IUserRepository;
 import com.forum.auth.domain.usecase.RegisterUseCase;
 import com.forum.auth.domain.user.UserCredentialsEntity;
 import com.forum.auth.domain.valuesobject.Email;
-import com.forum.auth.application.errors.EmailAlreadyExistsException;
+import com.forum.auth.application.exception.EmailAlreadyExistsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
