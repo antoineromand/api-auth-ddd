@@ -24,17 +24,29 @@ public class LoginUseCaseImpl implements LoginUseCase {
     }
     @Override
     public UserCredentialsEntity login(String email, String password) throws UserNotFoundException, IncorrectPasswordException {
-        UserCredentialsEntity user = userRepository.findByEmail(new Email(email));
-        if (user == null) {
-            throw new UserNotFoundException("User not found");
-        }
-        Boolean isPasswordCorrect = passwordEncryption.matches(password, user.getPassword().getValue());
-        if (!isPasswordCorrect) {
-            throw new IncorrectPasswordException("Incorrect password");
-        }
-        if(!user.getAccountStatus().equals(UserCredentialsEntity.AccountStatus.ACTIVE)) {
-            throw new InactiveUserException("User must activate account first");
-        }
+        UserCredentialsEntity user = validateUserExist(email);
+        validatePassword(password, user.getPassword().getValue());
+        validateAccountStatus(user);
         return user;
     }
+
+    private UserCredentialsEntity validateUserExist(String email) {
+        if (userRepository.findByEmail(new Email(email)) == null) {
+            throw new UserNotFoundException("Email already exists");
+        } else {
+            return userRepository.findByEmail(new Email(email));
+        }
+    }
+
+    private void validatePassword(String password, String encryptedPassword) {
+        if(!passwordEncryption.matches(password, encryptedPassword))
+            throw new IncorrectPasswordException("Incorrect password");
+    }
+
+    private void validateAccountStatus(UserCredentialsEntity user) {
+        if(user.getAccountStatus().equals(UserCredentialsEntity.AccountStatus.INACTIVE))
+            throw new InactiveUserException("User must activate account first");
+    }
+
+
 }

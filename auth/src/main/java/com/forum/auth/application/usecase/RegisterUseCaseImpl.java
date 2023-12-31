@@ -25,15 +25,29 @@ public class RegisterUseCaseImpl implements RegisterUseCase {
     }
 
     @Override
-    public void register(String email, String password) throws EmailAlreadyExistsException {
-        UserCredentialsDTO userDto = new UserCredentialsDTO(email, password);
-        String encryptedPassword = passwordEncryption.encryptPassword(userDto.getPassword());
-        UserCredentialsEntity userCredentialsEntity = userRepository.findByEmail(new Email(userDto.getEmail()));
-        if (userCredentialsEntity != null) {
+    public void execute(String email, String password) throws EmailAlreadyExistsException {
+        validateEmailNotTaken(email);
+        String encryptedPassword = encryptPassword(password);
+        UserCredentialsDTO userDto = new UserCredentialsDTO(email, encryptedPassword);
+        UserCredentialsEntity user = convertToEntity(userDto);
+        saveUser(user);
+    }
+
+    private void validateEmailNotTaken(String email) {
+        if (userRepository.findByEmail(new Email(email)) != null) {
             throw new EmailAlreadyExistsException("Email already exists");
         }
-        userDto.setPassword(encryptedPassword);
-        UserCredentialsEntity user = userCredentialsMapper.toEntity(userDto);
+    }
+
+    private String encryptPassword(String password) {
+        return passwordEncryption.encryptPassword(password);
+    }
+
+    private UserCredentialsEntity convertToEntity(UserCredentialsDTO userDto) {
+        return userCredentialsMapper.toEntity(userDto);
+    }
+
+    private void saveUser(UserCredentialsEntity user) {
         userRepository.save(user);
     }
 }

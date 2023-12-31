@@ -6,8 +6,19 @@ services:
     ports:
       - "5434:5432"
     volumes:
-      - ~/apps/postgres:/var/lib/postgresql/data
+      - ~/apps/postgres-auth:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       - POSTGRES_DB=java_auth
+      - POSTGRES_PASSWORD=password
 
+  postgres-user:
+    image: postgres
+    ports:
+      - "5435:5432"
+    volumes:
+      - ~/apps/postgres-user:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - POSTGRES_DB=java_user
+      - POSTGRES_PASSWORD=password

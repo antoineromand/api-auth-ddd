@@ -31,7 +31,9 @@ public class PublicAuthRegisterController {
     public ResponseEntity<AuthResponseDTO> register(@RequestBody UserCredentialsDTO credentials) {
         EmailValidator.validate(credentials.getEmail());
         PasswordValidator.validate(credentials.getPassword());
-        this.registerUseCase.register(credentials.getEmail(), credentials.getPassword());
+        this.registerUseCase.execute(credentials.getEmail(), credentials.getPassword());
         return ResponseEntity.ok().body(new AuthResponseDTO("User registered successfully", HttpStatus.OK.value()));
     }
+
+
 }
