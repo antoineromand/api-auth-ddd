@@ -5,19 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698fad1e-5863-4e93-aafc-7d35da25887a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4953475-9558-4e2e-8725-deb7d770f9f6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4953475-9558-4e2e-8725-deb7d770f9f6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4953475-9558-4e2e-8725-deb7d770f9f6/storage_v2/_src_/database/java_auth.pfG1zQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4953475-9558-4e2e-8725-deb7d770f9f6/storage_v2/_src_/database/java_auth.pfG1zQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4953475-9558-4e2e-8725-deb7d770f9f6/storage_v2/_src_/database/java_auth.pfG1zQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4953475-9558-4e2e-8725-deb7d770f9f6/storage_v2/_src_/database/java_auth.pfG1zQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/domain/user/UserCredentialsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dxs/auth/AuthApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/auth.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/auth.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/usecase/LoginUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/usecase/LoginUseCaseImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/usecase/RegisterUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/usecase/RegisterUseCaseImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/usecase/RegisterUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/usecase/RegisterUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/Password.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/controller/PublicAuthRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/controller/PublicAuthRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/AuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/AuthApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/exception/EmailAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/application/exception/EmailAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/exception/InactiveUserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/application/exception/InactiveUserException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/exception/IncorrectPasswordException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/application/exception/IncorrectPasswordException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/application/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/mapper/UserCredentialsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/application/mapper/UserCredentialsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/usecase/LoginUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/application/usecase/LoginUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/application/usecase/RegisterUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/application/usecase/RegisterUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/domain/repository/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/service/IPasswordEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/domain/service/IPasswordEncryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/usecase/LoginUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/domain/usecase/LoginUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/usecase/RegisterUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/domain/usecase/RegisterUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/user/UserCredentialsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/infrastructure/model/UserCredentialsDBModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/domain/valuesobject/Email.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/domain/valuesobject/Password.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/domain/valuesobject/ResetPasswordToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/domain/valuesobject/ResetPasswordToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/infrastructure/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/config/BCryptPasswordEncryptionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/infrastructure/config/BCryptPasswordEncryptionImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/infrastructure/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/config/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/infrastructure/config/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/config/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/infrastructure/config/jwt/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/exception/EmailAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/infrastructure/exception/EmailAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/exception/ExceptionInfrastructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/infrastructure/exception/ExceptionInfrastructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/repository/UserCredentialsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/infrastructure/repository/UserCredentialsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/infrastructure/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/infrastructure/repository/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/controller/PrivateAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/controller/PrivateAuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/controller/PublicAuthLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/controller/PublicAuthLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/controller/PublicAuthRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/controller/PublicAuthRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/controller/exception/AuthControllerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/controller/exception/AuthControllerException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/controller/exception/ControllerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/controller/exception/ControllerException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/controller/exception/UserCredentialsDTOException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/controller/exception/UserCredentialsDTOException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/dto/UserCredentialsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/dto/UserCredentialsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/dto/exception/BlankException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/dto/exception/BlankException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/dto/exception/DTOException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/dto/exception/DTOException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/dto/exception/EmailInvalidException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/dto/exception/EmailInvalidException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/dto/exception/EmptyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/dto/exception/EmptyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/dto/exception/PasswordExceptions/PasswordFormInvalidException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/dto/exception/PasswordExceptions/PasswordFormInvalidException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/dto/exception/PasswordExceptions/PasswordLengthException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/dto/exception/PasswordExceptions/PasswordLengthException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/dto/validators/EmailValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/dto/validators/EmailValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/dto/validators/PasswordValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/dto/validators/PasswordValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/forum/auth/web/response/AuthResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dxs/auth/web/response/AuthResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/test/java/com/forum/auth/AuthApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/test/java/com/forum/auth/application/usecase/RegisterUseCaseImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dxs/auth/application/usecase/RegisterUseCaseImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/test/java/com/forum/auth/domain/user/UserCredentialsEntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dxs/auth/domain/user/UserCredentialsEntityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/test/java/com/forum/auth/infrastructure/BCryptPasswordEncryptionImplIntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dxs/auth/infrastructure/BCryptPasswordEncryptionImplIntTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/test/java/com/forum/auth/infrastructure/UserRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dxs/auth/infrastructure/UserRepositoryImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/test/java/com/forum/auth/web/dto/UserCredentialsDTOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dxs/auth/web/dto/UserCredentialsDTOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +75,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/auth">
       <ProjectState />
     </projectState>
@@ -66,43 +119,61 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2X1uxfhr0p0itdnGqiqrRRojv7A" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/antoineromand/Desktop/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml.postgres-auth: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/antoineromand/Desktop/JAVA PROJECTS/AuthProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
-      "PostgreSQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;PostgreSQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/dxs/auth/infrastructure/config" />
+      <recent name="$PROJECT_DIR$/src/" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/" />
+      <recent name="$PROJECT_DIR$/auth" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.forum.auth.infrastructure.config" />
     </key>
@@ -114,7 +185,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose">
+  <component name="RunManager" selected="Docker.docker-compose.yml.postgres-auth: Compose Deployment">
     <configuration name="UserCredentialsDTOTest.shouldCreatePassword" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -187,19 +258,29 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/auth/auth/build/reports/jacoco/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.postgres-auth: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres-auth" />
+            </list>
+          </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
@@ -219,19 +300,18 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.postgres-auth: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.postgres-user: Compose Deployment" />
       <item itemvalue="Gradle.UserCredentialsDTOTest.shouldCreatePassword" />
       <item itemvalue="Gradle.UserCredentialsDTOTest.shouldThrowExceptionWhenPasswordDoesNotContainAtLeastOneDigit" />
       <item itemvalue="Gradle.UserCredentialsDTOTest.shouldThrowExceptionWhenPasswordDoesNotContainAtLeastOneUpperCaseLetter" />
-      <item itemvalue="JavaScript Debug.index.html" />
-      <item itemvalue="Spring Boot.AuthApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.postgres-auth: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.postgres-user: Compose Deployment" />
         <item itemvalue="Gradle.UserCredentialsDTOTest.shouldCreatePassword" />
-        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Gradle.UserCredentialsDTOTest.shouldThrowExceptionWhenPasswordDoesNotContainAtLeastOneUpperCaseLetter" />
         <item itemvalue="Gradle.UserCredentialsDTOTest.shouldThrowExceptionWhenPasswordDoesNotContainAtLeastOneDigit" />
       </list>

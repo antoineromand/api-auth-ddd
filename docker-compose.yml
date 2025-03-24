@@ -3,22 +3,20 @@ version: '3.9'
 services:
   postgres-auth:
     image: postgres
+    restart: unless-stopped
+    healthcheck:
+        test: [ "CMD-SHELL", "pg_isready -d postgres" ]
+        interval: 30s
+        timeout: 10s
+        retries: 5
     ports:
-      - "5434:5432"
+      - ${DB_PORT}:5432
     volumes:
-      - ~/apps/postgres-auth:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=java_auth
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
 
-  postgres-user:
-    image: postgres
-    ports:
-      - "5435:5432"
-    volumes:
-      - ~/apps/postgres-user:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    environment:
-      - POSTGRES_DB=java_user
-      - POSTGRES_PASSWORD=password
+volumes:
+  postgres_data:
