@@ -1,4 +1,4 @@
-package com.dxs.auth.config;
+package com.dxs.auth.infrastructure.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
