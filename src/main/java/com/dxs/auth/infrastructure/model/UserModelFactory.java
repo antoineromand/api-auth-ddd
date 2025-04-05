@@ -2,14 +2,14 @@ package com.dxs.auth.infrastructure.model;
 
 import com.dxs.auth.core.entity.IUserFactory;
 import com.dxs.auth.core.entity.RoleEnum;
-import com.dxs.auth.web.dto.RegisterDTO;
+import com.dxs.auth.web.dto.register.RegisterInputDTO;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserModelFactory implements IUserFactory<UserModel, RegisterDTO> {
+public class UserModelFactory implements IUserFactory<UserModel, RegisterInputDTO> {
 
     @Override
-    public UserModel createUser(RegisterDTO registerDTO, String encryptedPassword) {
+    public UserModel createUser(RegisterInputDTO registerDTO, String encryptedPassword) {
         UserModel user = new UserModel();
         user.setRole(RoleEnum.REGULAR);
         user.setEmail(registerDTO.getEmail());
