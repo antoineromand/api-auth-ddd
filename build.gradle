@@ -1,50 +1,50 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.1.5'
-	id 'io.spring.dependency-management' version '1.1.3'
-	id 'jacoco'
+	id 'org.springframework.boot' version '3.4.2'
+	id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.dxs'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 
 java {
-	sourceCompatibility = '17'
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(23)
+	}
 }
 
 repositories {
 	mavenCentral()
 }
 
-jacoco {
-	toolVersion = "0.8.9"
-}
-
-jacocoTestReport {
-	reports {
-		xml.required = false
-		csv.required = false
-		html.outputLocation = layout.buildDirectory.dir('reports/jacoco')
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
 	}
 }
 
 dependencies {
-	implementation 'io.jsonwebtoken:jjwt-api:0.12.3'
-	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.3'
-	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.3'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.kafka:spring-kafka'
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.kafka:spring-kafka-test'
 	testImplementation 'org.springframework.security:spring-security-test'
-	testImplementation "org.mockito:mockito-core:3.+"
-}
+	testImplementation 'org.mockito:mockito-core:5.14.2'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
-tasks.named('bootBuildImage') {
-	builder = 'paketobuildpacks/builder-jammy-base:latest'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	implementation files("libs/auth-core-1.0.0.jar")
+	testImplementation 'com.h2database:h2'
+
+	implementation "io.jsonwebtoken:jjwt-api:0.12.6"
+	runtimeOnly "io.jsonwebtoken:jjwt-impl:0.12.6"
+	runtimeOnly "io.jsonwebtoken:jjwt-jackson:0.12.6"
+
+
 }
 
 tasks.named('test') {
