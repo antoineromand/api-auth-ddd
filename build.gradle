@@ -15,6 +15,13 @@ java {
 
 repositories {
 	mavenCentral()
+	maven {
+		url = uri("https://maven.pkg.github.com/antoineromand/dxs-auth-core")
+		credentials {
+			username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
+			password = project.findProperty("gpr.key") ?: System.getenv("GPR_KEY")
+		}
+	}
 }
 
 configurations {
@@ -37,14 +44,13 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
-	implementation files("libs/auth-core-1.0.0.jar")
+	implementation 'com.dxs.auth.core:auth-core:1.2.0'
 	testImplementation 'com.h2database:h2'
 
 	implementation "io.jsonwebtoken:jjwt-api:0.12.6"
 	runtimeOnly "io.jsonwebtoken:jjwt-impl:0.12.6"
 	runtimeOnly "io.jsonwebtoken:jjwt-jackson:0.12.6"
-
-
+	
 }
 
 tasks.named('test') {
