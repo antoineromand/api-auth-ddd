@@ -19,16 +19,14 @@ import java.util.Arrays;
 import java.util.Optional;
 
 @RestController()
-@RequestMapping("api/v1/auth")
+@RequestMapping("public/api/v1/auth")
 public class AuthController {
     private final RegisterUserService registerUserService;
     private final LoginUserService loginUserService;
-    private final VerifyTokenService verifyTokenService;
 
-    public AuthController(RegisterUserService registerUserService, LoginUserService loginUserService, VerifyTokenService verifyTokenService) {
+    public AuthController(RegisterUserService registerUserService, LoginUserService loginUserService) {
         this.registerUserService = registerUserService;
         this.loginUserService = loginUserService;
-        this.verifyTokenService = verifyTokenService;
     }
 
     @PostMapping("/register")
@@ -47,26 +45,6 @@ public class AuthController {
         cookie.setPath("/");
         //cookie.setSecure(true);
         response.addCookie(cookie);
-        return ResponseEntity.noContent().build();
-    }
-
-    @GetMapping("/verify-token")
-    public ResponseEntity<?> verifyToken(HttpServletRequest request) {
-        Cookie[] cookies = Optional.ofNullable(request.getCookies()).orElse(new Cookie[0]);
-
-        Optional<String> jwtCookie = Arrays.stream(cookies)
-                .filter(c -> "dxs-cookie-token".equals(c.getName()))
-                .map(Cookie::getValue)
-                .findFirst();
-
-        if (jwtCookie.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-        }
-
-        boolean isValid = verifyTokenService.verifyToken(jwtCookie.get());
-
-        return isValid
-                ? ResponseEntity.ok().build()
-                : ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        return ResponseEntity.ok().body("User logged in successfully");
     }
 }
