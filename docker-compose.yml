@@ -4,19 +4,38 @@ services:
   postgres-auth:
     image: postgres
     restart: unless-stopped
+    command: ["postgres", "-c", "port=${DB_PORT}"]
     healthcheck:
         test: [ "CMD-SHELL", "pg_isready -d postgres" ]
         interval: 30s
         timeout: 10s
         retries: 5
     ports:
-      - ${DB_PORT}:5432
+      - ${DB_PORT}:${DB_PORT}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=${DB_NAME}
       - POSTGRES_USER=${DB_USERNAME}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
+
+  auth-api:
+    image: dxs-auth-api:latest
+    ports:
+      - ${SPRING_APP_PORT}:${SPRING_APP_PORT}
+    depends_on:
+      - postgres-auth
+    environment:
+      DB_USERNAME: ${DB_USERNAME}
+      DB_HOST: ${DB_HOST}
+      DB_NAME: ${DB_NAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_PORT: ${DB_PORT}
+      SPRING_APP_PORT: ${SPRING_APP_PORT}
+      PUBLIC_KEY_PATH: ${PUBLIC_KEY_PATH}
+      PRIVATE_KEY_PATH: ${PRIVATE_KEY_PATH}
+    volumes:
+      - ./keys:/app/keys:ro
 
 volumes:
   postgres_data:
