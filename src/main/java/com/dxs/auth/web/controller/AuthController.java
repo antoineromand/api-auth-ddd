@@ -2,21 +2,14 @@ package com.dxs.auth.web.controller;
 
 import com.dxs.auth.application.LoginUserService;
 import com.dxs.auth.application.RegisterUserService;
-import com.dxs.auth.application.VerifyTokenService;
-import com.dxs.auth.core.usecase.VerifyTokenUseCase;
 import com.dxs.auth.domain.User;
-import com.dxs.auth.web.dto.LoginInputDTO;
-import com.dxs.auth.web.dto.register.RegisterInputDTO;
-import com.dxs.auth.web.dto.register.RegisterResponseDTO;
+import com.dxs.auth.web.dto.auth.register.LoginInputDTO;
+import com.dxs.auth.web.dto.auth.register.RegisterInputDTO;
+import com.dxs.auth.web.dto.auth.register.RegisterResponseDTO;
 import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 @RestController()
 @RequestMapping("public/api/v1/auth")

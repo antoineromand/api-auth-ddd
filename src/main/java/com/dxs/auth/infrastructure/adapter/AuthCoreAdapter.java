@@ -9,8 +9,7 @@ import com.dxs.auth.core.usecase.LoginUseCase;
 import com.dxs.auth.core.usecase.RegisterUseCase;
 import com.dxs.auth.core.usecase.VerifyTokenUseCase;
 import com.dxs.auth.infrastructure.model.UserModel;
-import com.dxs.auth.web.dto.register.RegisterInputDTO;
-import com.dxs.auth.web.dto.register.RegisterResponseDTO;
+import com.dxs.auth.web.dto.auth.register.RegisterInputDTO;
 import org.springframework.stereotype.Component;
 
 @Component

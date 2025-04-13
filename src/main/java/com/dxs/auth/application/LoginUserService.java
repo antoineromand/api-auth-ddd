@@ -2,12 +2,8 @@ package com.dxs.auth.application;
 
 import com.dxs.auth.core.response.Response;
 import com.dxs.auth.infrastructure.adapter.AuthCoreAdapter;
-import com.dxs.auth.infrastructure.model.UserModel;
-import com.dxs.auth.infrastructure.repository.JPAUserModelRepository;
-import com.dxs.auth.web.dto.LoginInputDTO;
+import com.dxs.auth.web.dto.auth.register.LoginInputDTO;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class LoginUserService {

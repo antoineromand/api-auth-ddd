@@ -2,7 +2,7 @@ package com.dxs.auth.infrastructure.model;
 
 import com.dxs.auth.core.entity.IUserFactory;
 import com.dxs.auth.core.entity.RoleEnum;
-import com.dxs.auth.web.dto.register.RegisterInputDTO;
+import com.dxs.auth.web.dto.auth.register.RegisterInputDTO;
 import org.springframework.stereotype.Component;
 
 @Component

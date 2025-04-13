@@ -1,4 +1,4 @@
-package com.dxs.auth.web.dto.register;
+package com.dxs.auth.web.dto.auth.register;
 
 import com.dxs.auth.core.response.RegisterInput;
 import lombok.AllArgsConstructor;
