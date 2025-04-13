@@ -34,6 +34,7 @@ services:
       SPRING_APP_PORT: ${SPRING_APP_PORT}
       PUBLIC_KEY_PATH: ${PUBLIC_KEY_PATH}
       PRIVATE_KEY_PATH: ${PRIVATE_KEY_PATH}
+      GATEWAY_URI: ${GATEWAY_URI}
     volumes:
       - ./keys:/app/keys:ro
 

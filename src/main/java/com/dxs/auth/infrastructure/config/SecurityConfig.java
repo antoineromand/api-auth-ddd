@@ -25,54 +25,24 @@ import java.util.List;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    @Value("${GATEWAY_URI}")
-    private static String gatewayUri;
+    @Bean
+    public CustomHeaderFilter customHeaderFilter(@Value("${gateway.uri}") String gatewayUri) {
+        return new CustomHeaderFilter(gatewayUri);
+    }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http, CustomHeaderFilter customHeaderFilter) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth.
-                        requestMatchers("/public/api/v1/auth")
+                        requestMatchers("/public/api/v1/auth/**")
                         .permitAll()
                         .anyRequest().authenticated())
-                .addFilterBefore(new CustomHeaderFilter(), UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(customHeaderFilter, UsernamePasswordAuthenticationFilter.class)
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .formLogin(AbstractHttpConfigurer::disable);
         return http.build();
     }
 
-    public static class CustomHeaderFilter extends OncePerRequestFilter {
 
-        @Override
-        protected void doFilterInternal(HttpServletRequest request,
-                                        HttpServletResponse response,
-                                        FilterChain filterChain) throws ServletException, IOException {
-
-            String uri = request.getRequestURI();
-
-            if(uri.startsWith("private/api")) {
-                String origin = request.getHeader("Origin");
-                String userId = request.getHeader("x-user-id");
-                String userRole = request.getHeader("x-user-role");
-
-                if (!gatewayUri.equals(origin)
-                        || userId == null || userRole == null) {
-                    response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-                    response.getWriter().write("Forbidden: Missing or invalid headers");
-                    return;
-                }
-
-                List<SimpleGrantedAuthority> authorities =
-                        List.of(new SimpleGrantedAuthority("ROLE_" + userRole.toUpperCase()));
-
-                Authentication auth =
-                        new UsernamePasswordAuthenticationToken(userId, null, authorities);
-
-                SecurityContextHolder.getContext().setAuthentication(auth);
-            }
-
-            filterChain.doFilter(request, response);
-        }
-    }
 }

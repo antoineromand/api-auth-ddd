@@ -4,10 +4,12 @@ import com.dxs.auth.core.exceptions.AuthenticationFailedException;
 import com.dxs.auth.domain.User;
 import com.dxs.auth.infrastructure.model.UserModel;
 import com.dxs.auth.infrastructure.repository.UserModelRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.UUID;
 
+@Service
 public class GetInfoUserService {
     private UserModelRepository repository;
 
