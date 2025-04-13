@@ -32,6 +32,10 @@ public class CustomHeaderFilter extends OncePerRequestFilter {
             filterChain.doFilter(request, response);
             return;
         }
+        if ("/private/api/v1/auth/verify-token".equals(uri)) {
+            filterChain.doFilter(request, response);
+            return;
+        }
         if(uri.startsWith("/private/api")) {
             String origin = request.getHeader("Origin");
             String userId = request.getHeader("x-user-id");

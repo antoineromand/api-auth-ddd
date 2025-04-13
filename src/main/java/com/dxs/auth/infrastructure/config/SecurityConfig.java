@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -31,12 +32,14 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http, CustomHeaderFilter customHeaderFilter) throws Exception {
+    @Order(2)
+    public SecurityFilterChain defaultSecurityFilter(HttpSecurity http, CustomHeaderFilter customHeaderFilter) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth.
                         requestMatchers("/public/api/v1/auth/**")
                         .permitAll()
+                        .requestMatchers("/private/api/v1/auth/verify-token").permitAll()
                         .anyRequest().authenticated())
                 .addFilterBefore(customHeaderFilter, UsernamePasswordAuthenticationFilter.class)
                 .httpBasic(AbstractHttpConfigurer::disable)
