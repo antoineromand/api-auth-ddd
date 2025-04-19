@@ -27,8 +27,8 @@ import java.util.List;
 public class SecurityConfig {
 
     @Bean
-    public CustomHeaderFilter customHeaderFilter(@Value("${gateway.uri}") String gatewayUri) {
-        return new CustomHeaderFilter(gatewayUri);
+    public CustomHeaderFilter customHeaderFilter(@Value("${gateway.api.key}") String apiKey) {
+        return new CustomHeaderFilter(apiKey);
     }
 
     @Bean

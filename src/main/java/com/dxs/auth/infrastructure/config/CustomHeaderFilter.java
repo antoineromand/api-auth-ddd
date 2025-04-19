@@ -16,10 +16,10 @@ import java.util.List;
 
 public class CustomHeaderFilter extends OncePerRequestFilter {
 
-    private String gatewayUri;
+    private String apiKey;
 
-    public CustomHeaderFilter(String gatewayUri) {
-        this.gatewayUri = gatewayUri;
+    public CustomHeaderFilter(String apiKey) {
+        this.apiKey = apiKey;
     }
 
     @Override
@@ -37,11 +37,11 @@ public class CustomHeaderFilter extends OncePerRequestFilter {
             return;
         }
         if(uri.startsWith("/private/api")) {
-            String origin = request.getHeader("Origin");
-            String userId = request.getHeader("x-user-id");
-            String userRole = request.getHeader("x-user-role");
+            String apiKeyHeader = request.getHeader("X-Api-Key");
+            String userId = request.getHeader("X-User-Id");
+            String userRole = request.getHeader("X-User-Role");
 
-            if (!gatewayUri.equals(origin)
+            if (!apiKey.equals(apiKeyHeader)
                     || userId == null || userRole == null) {
                 response.setStatus(HttpServletResponse.SC_FORBIDDEN);
                 response.getWriter().write("Forbidden: Missing or invalid headers");
