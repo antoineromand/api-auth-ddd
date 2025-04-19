@@ -11,7 +11,11 @@ import java.util.UUID;
 
 @Service
 public class GetInfoUserService {
-    private UserModelRepository repository;
+    private final UserModelRepository repository;
+
+    public GetInfoUserService(UserModelRepository repository) {
+        this.repository = repository;
+    }
 
     public User getInfo(UUID userId) {
         if (userId == null) {

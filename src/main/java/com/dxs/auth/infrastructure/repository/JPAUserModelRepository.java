@@ -3,10 +3,11 @@ package com.dxs.auth.infrastructure.repository;
 import com.dxs.auth.core.external.repository.AbstractUserRepository;
 import com.dxs.auth.infrastructure.model.UserModel;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Repository
+@Service
 public class JPAUserModelRepository implements AbstractUserRepository<UserModel> {
     private final UserModelRepository userModelRepository;
 
